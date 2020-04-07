@@ -13,6 +13,7 @@ maven (run on 3.6 version)
 To prepare authorization:
 Add these lines to standalone.xml file in wildfly directory:
 
+```xml
 <security-domain name="my-sec-domain" cache-type="default">
   <authentication>  
     <login-module code="UsersRoles" flag="required">
@@ -21,7 +22,8 @@ Add these lines to standalone.xml file in wildfly directory:
     </login-module>
   </authentication>
 <security-domain/>
-  
+```
+
 1. Run wildfly: sudo systemctl start wildfly
 2. Deploy Service: mvn clean install wildfly:deploy
 
